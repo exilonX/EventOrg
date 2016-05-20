@@ -14,7 +14,7 @@ class NavbarController {
 
     this.status = {
       isOpen : false
-    }
+    };
   }
 
   changeLanguage(langKey) {

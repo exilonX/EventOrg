@@ -31,6 +31,12 @@ require('./config/socketio').default(socketio);
 require('./config/express').default(app);
 require('./routes').default(app);
 
+var opbeat = require('opbeat').start({
+  appId: '1e10a0e0a7',
+  organizationId: '4e8d6057e1ee4d9889395c08e3dcc670',
+  secretToken: '427bd66f47db6419642e8ea47a863d1597f23797'
+});
+
 // Start server
 function startServer() {
   app.angularFullstack = server.listen(config.port, config.ip, function() {
